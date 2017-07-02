@@ -9,3 +9,8 @@ def organization(file_name='game_stat.txt'):
     file.close()
     return game_properties
 
+
+def count_games(file_name):
+    games = organization(file_name)
+    return(len(game))
+
