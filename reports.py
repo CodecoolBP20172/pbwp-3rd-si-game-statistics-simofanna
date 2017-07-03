@@ -48,3 +48,11 @@ def get_line_number_by_title(file_name, title):
         if title == games[game_index][0]:
             return game_index + 1
     raise ValueError('game not in the file')
+
+
+def sort_abc(file_name):
+    game_title_list = []
+    for game_index in games:
+        game_title_list.append(game_index[0])
+    game_title_list.sort()
+    return game_title_list
