@@ -31,3 +31,13 @@ def get_latest(file_name):
             latest_game_index = game_index
         return(games[latest_game_index][0])
 
+
+def count_by_genre(file_name, genre):
+    genre_sum = 0
+    games_dir = organization(file_name)
+    for game_index in range(len(games_dir)):
+        if games_dir[game_index][3] == genre:
+            genre_sum += 1
+    return(genre_sum)
+
+
