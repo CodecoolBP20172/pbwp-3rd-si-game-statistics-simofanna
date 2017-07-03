@@ -61,7 +61,11 @@ def sort_abc(file_name):
 
 
 def get_genres(file_name):
-    pass
+    games = organization(file_name)
+    game_genre_list = []
+    for game_index in games:
+        game_genre_list.append(game_index[3])
+    return game_genre_list
 
 
 def when_was_top_sold_fps(file_name):
