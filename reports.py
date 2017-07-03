@@ -52,6 +52,7 @@ def get_line_number_by_title(file_name, title):
 
 # need another solution
 def sort_abc(file_name):
+    games = organization(file_name)
     game_title_list = []
     for game_index in games:
         game_title_list.append(game_index[0])
