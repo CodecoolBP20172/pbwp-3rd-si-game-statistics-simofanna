@@ -22,3 +22,12 @@ def decide(file_name, year):
             return True
     return False
 
+
+def get_latest(file_name):
+    games = organization(file_name)
+    latest_game_index = 0
+    for game_index in range(len(games)):
+        if games[game_index][2] > games[latest_game_index][2]:
+            latest_game_index = game_index
+        return(games[latest_game_index][0])
+
