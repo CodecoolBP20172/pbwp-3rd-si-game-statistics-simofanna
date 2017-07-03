@@ -13,3 +13,12 @@ def organization(file_name):
 def count_games(file_name):
     games = organization(file_name)
     return(len(game))
+
+
+def decide(file_name, year):
+    games = organization(file_name)
+    for game_index in range(len(games)):
+        if games[game_index][2] == year:
+            return True
+    return False
+
