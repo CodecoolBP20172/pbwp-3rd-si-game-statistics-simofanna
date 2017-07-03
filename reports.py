@@ -1,4 +1,4 @@
-def organization(file_name='game_stat.txt'):
+def organization(file_name):
     game_properties = []
     file = open(file_name, 'r')
     all_content = file.read().split('\n')
@@ -13,4 +13,3 @@ def organization(file_name='game_stat.txt'):
 def count_games(file_name):
     games = organization(file_name)
     return(len(game))
-
