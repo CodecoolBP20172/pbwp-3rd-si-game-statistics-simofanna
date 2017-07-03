@@ -34,10 +34,21 @@ def get_latest(file_name):
 
 def count_by_genre(file_name, genre):
     genre_sum = 0
-    games_dir = organization(file_name)
-    for game_index in range(len(games_dir)):
-        if games_dir[game_index][3] == genre:
+    games = organization(file_name)
+    for game_index in range(len(games)):
+        if games[game_index][3] == genre:
             genre_sum += 1
     return(genre_sum)
+
+
+def get_line_number_by_title(file_name, title):
+    games = organization(file_name)
+    title_index_number = 0
+    for game_index in range(len(games)):
+        if title == games[game_index][0]:
+            return game_index
+    raise ValueError('game not in the file')
+
+
 
 
