@@ -50,6 +50,7 @@ def get_line_number_by_title(file_name, title):
     raise ValueError('game not in the file')
 
 
+# need another solution
 def sort_abc(file_name):
     game_title_list = []
     for game_index in games:
