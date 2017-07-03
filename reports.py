@@ -46,9 +46,5 @@ def get_line_number_by_title(file_name, title):
     title_index_number = 0
     for game_index in range(len(games)):
         if title == games[game_index][0]:
-            return game_index
+            return game_index + 1
     raise ValueError('game not in the file')
-
-
-
-
