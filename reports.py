@@ -5,6 +5,8 @@ def organization(file_name):
     for line in all_content:
         game = line.split('\t')
         if len(game) == 5:
+            game[1] = float(game[1])
+            game[2] = int(game[2])
             game_properties.append(game)
     file.close()
     return game_properties
