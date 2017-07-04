@@ -12,15 +12,16 @@ def organization(file_name):
 
 def count_games(file_name):
     games = organization(file_name)
-    return(len(game))
+    return(len(games))
 
 
 def decide(file_name, year):
     games = organization(file_name)
     for game_index in range(len(games)):
         if games[game_index][2] == year:
+            return False
+        else:
             return True
-    return False
 
 
 def get_latest(file_name):
@@ -29,7 +30,7 @@ def get_latest(file_name):
     for game_index in range(len(games)):
         if games[game_index][2] > games[latest_game_index][2]:
             latest_game_index = game_index
-        return(games[latest_game_index][0])
+    return(games[latest_game_index][0])
 
 
 def count_by_genre(file_name, genre):
@@ -59,7 +60,7 @@ def sort_abc(file_name):
     game_title_list.sort()
     return game_title_list
 
-
+#fix it
 def get_genres(file_name):
     games = organization(file_name)
     game_genre_list = []
@@ -67,6 +68,7 @@ def get_genres(file_name):
         game_genre_list.append(game_index[3])
     return game_genre_list
 
-
+#finish it
 def when_was_top_sold_fps(file_name):
     pass
+    
