@@ -51,7 +51,6 @@ def get_line_number_by_title(file_name, title):
     raise ValueError('game not in the file')
 
 
-# need another solution
 def sort_abc(file_name):
     games = organization(file_name)
     game_title_list = []
@@ -61,16 +60,14 @@ def sort_abc(file_name):
     return game_title_list
 
 
-#fix it
 def get_genres(file_name):
     games = organization(file_name)
     game_genre_list = []
     for game_index in games:
-        game_genre_list.append(game_index[3])
+        if game_index[3] not in game_genre_list:
+            game_genre_list.append(game_index[3])
+    game_genre_list.sort()
+    print(game_genre_list)
     return game_genre_list
 
 
-#finish it
-def when_was_top_sold_fps(file_name):
-    pass
-    
