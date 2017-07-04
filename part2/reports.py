@@ -1,6 +1,3 @@
-from statistics import mean
-
-
 def organization(file_name):
     game_properties = []
     file = open(file_name, 'r')
@@ -34,7 +31,6 @@ def sum_sold(file_name):
     return total_sold
 
 
-# eladott példányszámok átlaga return number
 def get_selling_avg(file_name):
     games = organization(file_name)
     return sum_sold(file_name) / len(games)
