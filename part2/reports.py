@@ -45,11 +45,18 @@ def count_longest_title(file_name):
 
 
 def get_date_avg(file_name):
-    pass
+    games = organization(file_name)
+    date_list = []
+    for game_index in games:
+        date_list.append(game_index[2])
+    return round((sum(date_list)) / (len(date_list)))
 
 
 def get_game(file_name, title):
-    pass
+    games = organization(file_name)
+    for game_index in games:
+        if game_index[0] == title:
+            return game_index
 
 
 
